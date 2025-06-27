@@ -16,9 +16,9 @@
   <div id="plot" style="margin-top:20px;"></div>
 
   <script>
-    let allData = [];
+    let allData = ['oscars_distribuidoras_FINAL.csv'];
 
-    Papa.parse('oscars_distribuidoras_FINAL', {
+    Papa.parse('oscars_distribuidoras_FINAL.csv', {
       download: true,
       header: true,
       complete: function(results) {
