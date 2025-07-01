@@ -1,90 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Wilkinson Dot Plot - Nominaciones Streaming</title>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oscar Streaming</title>
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
-  <h2>Visualización de nominaciones del streaming</h2>
-  <label for="plataforma">Filtrar por plataforma:</label>
-  <select id="plataforma">
-    <option value="Todas">Todas</option>
-  </select>
 
-  <div id="plot" style="margin-top:20px;"></div>
+  <!-- SECCIÓN 1: ¿QUIÉN ESTÁ VIENDO? -->
+  <section class="index-body" id="inicio">
+    <div class="container">
+      <h1>¿Quién está viendo?</h1>
+      <div class="profile">
+        <a href="#introduccion">
+          <img src="logo.png" alt="Logo plataforma" class="profile-icon" />
+          <p>Entrar</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- SECCIÓN 2: INTRODUCCIÓN -->
+  <section class="intro-body" id="introduccion">
+    <div class="intro-container">
+      <h1>El streaming en los premios Óscars</h1>
+      <h2>¿Las plataformas de streaming están destronando a las distribuidoras tradicionales?</h2>
+
+      <p>
+        En las últimas dos décadas, el mundo del cine ha vivido una revolución silenciosa pero profunda. Lo que comenzó como un experimento con plataformas de arriendo de DVDs terminó convirtiéndose en un fenómeno global: el streaming. Empresas como Netflix, Amazon Prime Video, Apple TV+, Disney+, HBO Max y Hulu no solo cambiaron la forma en que consumimos contenido, sino también el lugar que ocupan en la industria cinematográfica. </p>
+
+      <p>
+        Esta transformación alcanzó un nuevo nivel cuando las plataformas de streaming comenzaron a competir —y a ganar— en los Premios Oscar, un territorio históricamente reservado para los grandes estudios de Hollywood. Desde las primeras nominaciones tímidas hasta triunfos como el de CODA de Apple TV+, el streaming ha consolidado su lugar en la élite del cine.</p>
+
+  </section>
+
+  <section class="scroll-section">
+    <div class="scroll-container">
+      <div class="scroll-column">
+        <div class="step">
+          <p><strong>1997:</strong> Se funda Netflix como un servicio de arriendo de DVDs por correo.</p>
+        </div>
+        <div class="step">
+          <p><strong>2007:</strong> Netflix lanza su servicio de streaming, introduciendo el modelo de suscripción de contenido en línea bajo demanda..</p>
+        </div>
+        <div class="step">
+          <p><strong>2013:</strong> Netflix lanza su primera producción original: <em>House of Cards</em>.</p>
+        </div>
+        <div class="step">
+          <p><strong>2014:</strong> Primera nominación al Oscar de Netflix: El documental egipcio <em>The Square</em> fue nominado a Mejor Documental.</p>
+        </div>
+        <div class="step">
+          <p><strong>2017:</strong> Netflix gana su primer Oscar con The White Helmets y Amazon gana dos premios con <em>Manchester by the Sea</em>.</p>
+        </div>
+        <div class="step">
+          <p><strong>2020:</strong> Apple TV+ gana su primer Oscar por <em>The Elephant Queen</em>.</p>
+        </div>
+        <div class="step">
+          <p><strong>2021:</strong> Apple TV+ recibe su primera nominación con<em>Wolfwalkers</em>.</p>
+        </div>
+        <div class="step">
+          <p><strong>2022:</strong> Apple TV+ gana Mejor Película con <em>CODA</em>.</p>
+        </div>
+        <div class="step">
+          <p><strong>2023:</strong> Disney+ logra su primera nominación con <em>Le Pupille</em>.</p>
+        </div>
+        <div class="step">
+          <p><strong>2024:</strong> Netflix iguala en nominaciones a estudios tradicionales en varias categorías clave.</p>
+        </div>
+      </div>
+  
+      <section class="graficos-section">
+        <div style="width: 100%; display: flex; flex-direction: column; align-items: center; gap: 40px;">
+          
+          <!-- Primer gráfico -->
+          <iframe 
+            src="nominaciones_vs_victorias_streaming.html" 
+            width="1000" 
+            height="700" 
+            style="border: none; margin-bottom: 0;">
+          </iframe>
+      
+          <!-- Texto entre gráficos -->
+          <div class="texto-graficos">
+            <p>
+              En esta webstory exploramos esa evolución. Te invitamos a recorrer una línea de tiempo con los hitos más relevantes, visualizar los datos de nominaciones y premios por distribuidora, comparar el crecimiento de cada plataforma y explorar en profundidad cómo el streaming ha dejado de ser una alternativa y se ha convertido en protagonista.
+            </p>
+            <p>
+              ¿Qué significa este cambio para el futuro del cine? ¿Está la industria viviendo una nueva era dorada impulsada por lo digital? Acompáñanos a descubrirlo.
+            </p>
+          </div>
+      
+          <!-- Segundo gráfico -->
+          <iframe 
+            src="wilkinson_focalizado_2cols.html" 
+            width="1000" 
+            height="700" 
+            style="border: none; margin-bottom: 0;">
+          </iframe>
+          <div class="texto-graficos">
+            <p>
+              Este fenómeno está estrechamente ligado al auge del modelo OTT (Over the Top), que permite la distribución de contenido audiovisual a través de internet, sin necesidad de los canales tradicionales como la televisión por cable o las salas de cine. Estas plataformas ofrecen acceso 24/7, permiten consumir contenido en múltiples dispositivos y, mediante membresías, representan una forma legal y flexible de acceder a una larga oferta medial. Su capacidad para generar recomendaciones personalizadas a través de algoritmos basados en análisis de comportamiento ha transformado radicalmente las prácticas de consumo, especialmente en audiencias móviles.</p>
+            <p>
+              El impacto de las OTT no se limita al público. También ha comenzado a transformar el modo en que se predicen y comprenden los premios. Un estudio publicado por la plataforma digital y base de datos Science Direct publicado en 2021 explora cómo el análisis de redes sociales y el aprendizaje automático pueden predecir a los ganadores del Óscar con cierto grado de precisión. Al analizar el comportamiento y las opiniones de los usuarios, los investigadores concluyen que el “ruido social” y las tendencias digitales podrían ser indicadores fiables de reconocimiento en la industria. La popularidad en línea, entonces, se convierte en una variable tan poderosa como las decisiones de la crítica o los votos académicos.</p>
+          </div>
+          <!-- Tabla interactiva -->
+          <iframe 
+            src="tabla_interactiva.html" 
+            width="1000" 
+            height="700" 
+            style="border: none;">
+          </iframe>
+      
+        </div>
+      </section>
+      
+      
+  
+
+  <!-- JAVASCRIPT: Scroll suave y animación de hitos -->
   <script>
-    let allData = ['oscars_distribuidoras_FINAL.csv'];
+    document.addEventListener("DOMContentLoaded", function() {
+      // Scroll suave al hacer clic en el logo
+      document.querySelector('a[href="#introduccion"]').addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector('#introduccion');
+        const offsetTop = target.offsetTop;
 
-    Papa.parse('oscars_distribuidoras_FINAL.csv', {
-      download: true,
-      header: true,
-      complete: function(results) {
-        allData = results.data;
-
-        // Llenar el select de plataformas
-        const plataformas = [...new Set(allData.map(d => d.Platform).filter(Boolean))];
-        const select = document.getElementById('plataforma');
-        plataformas.forEach(p => {
-          const option = document.createElement('option');
-          option.value = p;
-          option.textContent = p;
-          select.appendChild(option);
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
         });
+      });
 
-        // Dibujar inicialmente con todas
-        drawPlot('Todas');
+      // Aparecer los pasos al hacer scroll
+      const steps = document.querySelectorAll(".step");
 
-        // Agregar evento de filtro
-        select.addEventListener('change', e => {
-          drawPlot(e.target.value);
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
         });
-      }
+      }, {
+        threshold: 0.5
+      });
+
+      steps.forEach(step => observer.observe(step));
     });
-
-    function drawPlot(filtro) {
-      const filtrado = filtro === 'Todas' ? allData : allData.filter(d => d.Platform === filtro);
-
-      const ganadoras = filtrado.filter(d => d.Won === "1");
-      const nominadas = filtrado.filter(d => d.Won !== "1");
-
-      const traceGanadoras = {
-        x: ganadoras.map((_, i) => i + 1),
-        y: ganadoras.map(d => d.Title),
-        mode: 'markers',
-        type: 'scatter',
-        name: 'Ganadora',
-        marker: { color: 'gold', size: 12 },
-        text: ganadoras.map(d => d.Title),
-        hoverinfo: 'text'
-      };
-
-      const traceNominadas = {
-        x: nominadas.map((_, i) => i + 1),
-        y: nominadas.map(d => d.Title),
-        mode: 'markers',
-        type: 'scatter',
-        name: 'Solo nominada',
-        marker: { color: 'gray', size: 10 },
-        text: nominadas.map(d => d.Title),
-        hoverinfo: 'text'
-      };
-
-      const layout = {
-        title: `Películas nominadas (${filtro})`,
-        xaxis: { visible: false },
-        yaxis: {
-          title: '',
-          showticklabels: false
-        },
-        showlegend: true,
-        height: 500
-      };
-
-      Plotly.newPlot('plot', [traceGanadoras, traceNominadas], layout);
-    }
   </script>
-</body>
-</html>
+

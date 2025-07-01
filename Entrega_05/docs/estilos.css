@@ -1,90 +1,137 @@
-/* estilos.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f6f7;
-  color: #2e2e2e;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #5a112c; /* burdeo */
-  color: white;
-  padding: 2rem 1.5rem;
+/* SECCIÓN: ¿QUIÉN ESTÁ VIENDO? */
+.index-body {
+  background-color: #141414;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
 }
-
-h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin: 0;
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.container h1 {
+  font-size: 2em;
+  margin-bottom: 2rem;
 }
 
-.subtitulo {
-  font-weight: 300;
-  margin-top: 0.5rem;
-}
-
-.intro {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 1rem 1.5rem;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.pregunta-clave {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-  color: #5a112c;
-}
-
-.fuentes {
-  margin-top: 1rem;
-}
-
-.fuentes a {
-  display: inline-block;
-  margin-right: 1rem;
+.profile a {
   text-decoration: none;
-  color: #5a112c;
-  font-weight: 400;
-}
-
-.botones {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem auto;
-}
-
-.btn {
-  padding: 0.8rem 1.6rem;
-  border: none;
-  border-radius: 50px;
-  background-color: #5a112c;
   color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-.btn:hover {
-  background-color: #7a1a3d;
+.profile-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%;
+  border: 3px solid transparent;
+  transition: transform 0.3s ease, border 0.3s ease;
 }
 
-.btn.secundario {
-  background-color: #e7d7dc;
-  color: #5a112c;
+.profile-icon:hover {
+  transform: scale(1.05);
+  border: 3px solid #e50914;
 }
 
-.btn.secundario:hover {
-  background-color: #d5c2ca;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
+
+/* SECCIÓN: INTRODUCCIÓN EDITORIAL */
+.intro-body {
+  background-color: white;
+  color: #111;
+  font-family: 'Georgia', serif;
+  padding: 100px 5%;
+}
+
+.intro-container {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.8;
+  font-size: 1.2rem;
+  padding: 0 2rem;
+}
+
+.intro-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-container h2 {
+  font-size: 1.6rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.intro-container p {
+  margin-bottom: 1.5rem;
+}
+
+/* ========== SCROLLYTELLING HITOS ========== */
+
+.scroll-section {
+  padding: 80px 5%;
+  background-color: white;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.scroll-column {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  padding-right: 2rem;
+}
+
+.scroll-graphic {
+  width: 55%;
+}
+
+.step {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+  margin-bottom: 40vh; /* más espacio entre bloques */
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+.texto-graficos {
+  background-color: white;
+  color: #111;
+  font-family: 'Georgia', serif;
+  padding: 40px 5%;
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  font-size: 1.25rem; /* Texto grande */
+}
+
+.texto-graficos p {
+  margin-bottom: 0rem; /* Controlas el espacio entre párrafos */
+}
+
+
