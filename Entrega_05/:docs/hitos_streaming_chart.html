@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 14}, "title": {"anchor": "start", "fontSize": 18}}, "data": {"name": "data-75a96d223b7040afb330db064a4d074e"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Plataforma", "scale": {"domain": ["Netflix", "Amazon Prime Video", "Apple TV+", "Disney+", "HBO Max", "Hulu"], "range": ["#E50914", "#00A8E1", "#A2AAAD", "#113CCF", "#8A2BE2", "#1CE783"]}, "title": "Plataforma", "type": "nominal"}, "tooltip": [{"field": "Plataforma", "type": "nominal"}, {"field": "Evento", "type": "nominal"}, {"field": "A\u00f1o", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0, "title": "A\u00f1o"}, "field": "A\u00f1o", "type": "ordinal"}, "y": {"field": "Evento", "sort": "-x", "title": "Eventos", "type": "nominal"}}, "height": 400, "title": "Hitos Clave de Plataformas de Streaming en los Oscar", "width": 900, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-75a96d223b7040afb330db064a4d074e": [{"Plataforma": "Netflix", "Evento": "Fundaci\u00f3n", "A\u00f1o": 1997}, {"Plataforma": "Netflix", "Evento": "Inicio Streaming", "A\u00f1o": 2007}, {"Plataforma": "Netflix", "Evento": "Primer Original", "A\u00f1o": 2013}, {"Plataforma": "Netflix", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2014}, {"Plataforma": "Netflix", "Evento": "1\u00ba Oscar Ganado", "A\u00f1o": 2017}, {"Plataforma": "Amazon Prime Video", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2006}, {"Plataforma": "Amazon Prime Video", "Evento": "Inicio Streaming", "A\u00f1o": 2006}, {"Plataforma": "Amazon Prime Video", "Evento": "Primer Original", "A\u00f1o": 2013}, {"Plataforma": "Amazon Prime Video", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2017}, {"Plataforma": "Amazon Prime Video", "Evento": "1\u00ba Oscar Ganado", "A\u00f1o": 2017}, {"Plataforma": "Apple TV+", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2019}, {"Plataforma": "Apple TV+", "Evento": "Inicio Streaming", "A\u00f1o": 2019}, {"Plataforma": "Apple TV+", "Evento": "Primer Original", "A\u00f1o": 2019}, {"Plataforma": "Apple TV+", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2021}, {"Plataforma": "Apple TV+", "Evento": "1\u00ba Oscar Ganado", "A\u00f1o": 2022}, {"Plataforma": "Disney+", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2019}, {"Plataforma": "Disney+", "Evento": "Inicio Streaming", "A\u00f1o": 2019}, {"Plataforma": "Disney+", "Evento": "Primer Original", "A\u00f1o": 2019}, {"Plataforma": "Disney+", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2023}, {"Plataforma": "HBO Max", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2020}, {"Plataforma": "HBO Max", "Evento": "Inicio Streaming", "A\u00f1o": 2020}, {"Plataforma": "HBO Max", "Evento": "Primer Original", "A\u00f1o": 2020}, {"Plataforma": "HBO Max", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2021}, {"Plataforma": "Hulu", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2007}, {"Plataforma": "Hulu", "Evento": "Inicio Streaming", "A\u00f1o": 2008}, {"Plataforma": "Hulu", "Evento": "Primer Original", "A\u00f1o": 2011}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
