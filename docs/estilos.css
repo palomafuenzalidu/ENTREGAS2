@@ -57,7 +57,7 @@ body, html {
   font-family: 'Georgia', serif;
   color: #111;
   background-color: white;
-  text-align: left;
+  text-align: justify;
   line-height: 1.6;
   font-size: 1.15rem;
 }
@@ -185,7 +185,7 @@ body, html {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000;
-  text-align: left;
+  text-align: justify;
 }
 
 .intro-cine h2 {
@@ -198,39 +198,41 @@ body, html {
 /* ================== CARRUSEL GENERAL ================== */
 .carousel-container {
   background-color: #c9c4c4;
-  position: relative;
-  width: 90%;
-  max-width: 1000px;
-  margin: 10px auto 40px auto;
-  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto;
+  overflow: hidden; /* <--- antes: hidden */
+  border-radius: 12px;
   font-family: 'Georgia', serif;
+  position: relative;
+  padding-bottom: 40px; /* espacio para evitar corte en la parte baja */
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease;
+  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .card {
-  min-width: 99%;
-  box-sizing: border-box;
+  flex: 0 0 100%;
+  max-width: 100%;
   background-color: #fff;
   color: #000;
-  padding: 40px 30px;
-  border-radius: 20px;
-  margin: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  line-height: 1.4;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  line-height: 1.6;
   text-align: left;
-  font-size: 1.25rem;
-  word-wrap: break-word;
+  box-sizing: border-box;
 }
 
 .card h3 {
-  color: #222;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.3rem;        /* más compacto */
+  margin-bottom: 10px;
 }
 
 /* Botones carrusel */
@@ -241,8 +243,8 @@ body, html {
   background: #333;
   border: none;
   color: #fff;
-  font-size: 2rem;
-  padding: 10px 15px;
+  font-size: 1.5rem;
+  padding: 6px 10px;
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
@@ -251,7 +253,7 @@ body, html {
 }
 
 .carousel-btn:hover {
-  background: #555;
+  background: #ffffff;
 }
 
 .carousel-btn.prev {
@@ -270,7 +272,7 @@ body, html {
   font-size: 1.25rem;
   color: #111;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
 }
 
 .video-wrapper {
@@ -299,7 +301,7 @@ body, html {
   font-size: 1.25rem;
   line-height: 1.6;
   color: #111;
-  text-align: left;
+  text-align: justify;
 }
 
 .dist-prod-section img {
@@ -326,7 +328,7 @@ body, html {
   color: #111;
   font-size: 1.15rem;
   line-height: 1.7;
-  text-align: left;
+  text-align: justify;
 }
 
 .oscar-info-section h1 {
@@ -407,4 +409,28 @@ body, html {
 .texto-graficos {
   margin-top: 5px;  /* menos espacio */
   margin-bottom: 0.25rem;
+}
+.conclusion-section {
+  font-family: 'Georgia', serif;
+  color: #111;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.conclusion-section p {
+  margin-bottom: 1.5rem;
+}
+.texto-intro-iframe {
+  font-family: 'Georgia', serif;
+  font-size: 1.2rem;
+  color: #111;
+  max-width: 900px;
+  margin: 40px auto 20px auto;
+  padding: 0 20px;
+  text-align: justify;
+  line-height: 1.6;
 }
