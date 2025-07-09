@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 11, "titleFontSize": 13}, "title": {"anchor": "start", "fontSize": 18}}, "layer": [{"mark": {"type": "bar", "color": "white", "stroke": "lightgray", "strokeWidth": 0.5}, "encoding": {"tooltip": [{"field": "Plataforma", "type": "nominal"}, {"field": "Evento", "type": "nominal"}, {"field": "A\u00f1o", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0, "title": "A\u00f1o"}, "field": "A\u00f1o", "type": "ordinal"}, "y": {"field": "Evento", "sort": "-x", "title": "Eventos", "type": "nominal"}}}, {"mark": {"type": "image", "height": 50, "width": 40}, "encoding": {"url": {"field": "Logo", "type": "nominal"}, "x": {"field": "A\u00f1o", "type": "ordinal"}, "y": {"field": "Evento", "sort": "-x", "type": "nominal"}}}], "data": {"name": "data-fc7a3586c1deafdee906b4810df94e74"}, "height": 400, "title": "Hitos Clave de Plataformas de Streaming en los Oscar", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-fc7a3586c1deafdee906b4810df94e74": [{"Plataforma": "Netflix", "Evento": "Fundaci\u00f3n", "A\u00f1o": 1997, "Logo": "https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456"}, {"Plataforma": "Netflix", "Evento": "Inicio Streaming", "A\u00f1o": 2007, "Logo": "https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456"}, {"Plataforma": "Netflix", "Evento": "Primer Original", "A\u00f1o": 2013, "Logo": "https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456"}, {"Plataforma": "Netflix", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2014, "Logo": "https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456"}, {"Plataforma": "Netflix", "Evento": "1\u00ba Oscar Ganado", "A\u00f1o": 2017, "Logo": "https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=700&h=456"}, {"Plataforma": "Amazon Prime Video", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2006, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Amazon_Prime_Video_logo_%282024%29.svg/2048px-Amazon_Prime_Video_logo_%282024%29.svg.png"}, {"Plataforma": "Amazon Prime Video", "Evento": "Inicio Streaming", "A\u00f1o": 2006, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Amazon_Prime_Video_logo_%282024%29.svg/2048px-Amazon_Prime_Video_logo_%282024%29.svg.png"}, {"Plataforma": "Amazon Prime Video", "Evento": "Primer Original", "A\u00f1o": 2013, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Amazon_Prime_Video_logo_%282024%29.svg/2048px-Amazon_Prime_Video_logo_%282024%29.svg.png"}, {"Plataforma": "Amazon Prime Video", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2017, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Amazon_Prime_Video_logo_%282024%29.svg/2048px-Amazon_Prime_Video_logo_%282024%29.svg.png"}, {"Plataforma": "Amazon Prime Video", "Evento": "1\u00ba Oscar Ganado", "A\u00f1o": 2017, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Amazon_Prime_Video_logo_%282024%29.svg/2048px-Amazon_Prime_Video_logo_%282024%29.svg.png"}, {"Plataforma": "Apple TV+", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2019, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/AppleTVLogo.svg/1200px-AppleTVLogo.svg.png"}, {"Plataforma": "Apple TV+", "Evento": "Inicio Streaming", "A\u00f1o": 2019, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/AppleTVLogo.svg/1200px-AppleTVLogo.svg.png"}, {"Plataforma": "Apple TV+", "Evento": "Primer Original", "A\u00f1o": 2019, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/AppleTVLogo.svg/1200px-AppleTVLogo.svg.png"}, {"Plataforma": "Apple TV+", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2021, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/AppleTVLogo.svg/1200px-AppleTVLogo.svg.png"}, {"Plataforma": "Apple TV+", "Evento": "1\u00ba Oscar Ganado", "A\u00f1o": 2022, "Logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/AppleTVLogo.svg/1200px-AppleTVLogo.svg.png"}, {"Plataforma": "Disney+", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2019, "Logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Disney_plus_icon.png"}, {"Plataforma": "Disney+", "Evento": "Inicio Streaming", "A\u00f1o": 2019, "Logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Disney_plus_icon.png"}, {"Plataforma": "Disney+", "Evento": "Primer Original", "A\u00f1o": 2019, "Logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Disney_plus_icon.png"}, {"Plataforma": "Disney+", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2023, "Logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Disney_plus_icon.png"}, {"Plataforma": "HBO Max", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2020, "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOAv2FstT4qyGuhI0ZJo2UhsSxpZpVYMtakQ&s"}, {"Plataforma": "HBO Max", "Evento": "Inicio Streaming", "A\u00f1o": 2020, "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOAv2FstT4qyGuhI0ZJo2UhsSxpZpVYMtakQ&s"}, {"Plataforma": "HBO Max", "Evento": "Primer Original", "A\u00f1o": 2020, "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOAv2FstT4qyGuhI0ZJo2UhsSxpZpVYMtakQ&s"}, {"Plataforma": "HBO Max", "Evento": "1\u00aa Nominaci\u00f3n Oscar", "A\u00f1o": 2021, "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOAv2FstT4qyGuhI0ZJo2UhsSxpZpVYMtakQ&s"}, {"Plataforma": "Hulu", "Evento": "Fundaci\u00f3n", "A\u00f1o": 2007, "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkluPp1QJ4oHhT2WPzDIB5Y2qc-E2jRtG4eDm8QF0C4aoiGhT1os37wuSCBbzTx3VJHjg&usqp=CAU"}, {"Plataforma": "Hulu", "Evento": "Inicio Streaming", "A\u00f1o": 2008, "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkluPp1QJ4oHhT2WPzDIB5Y2qc-E2jRtG4eDm8QF0C4aoiGhT1os37wuSCBbzTx3VJHjg&usqp=CAU"}, {"Plataforma": "Hulu", "Evento": "Primer Original", "A\u00f1o": 2011, "Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkluPp1QJ4oHhT2WPzDIB5Y2qc-E2jRtG4eDm8QF0C4aoiGhT1os37wuSCBbzTx3VJHjg&usqp=CAU"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

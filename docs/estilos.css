@@ -27,15 +27,25 @@
 .profile a {
   text-decoration: none;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.profile a p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
 
 .profile-icon {
   width: 150px;
   height: 150px;
-  border-radius: 10%;
+  border-radius: 50%; /* Esto hace que sea completamente redondo */
   border: 3px solid transparent;
   transition: transform 0.3s ease, border 0.3s ease;
 }
+
 
 .profile-icon:hover {
   transform: scale(1.05);
@@ -131,7 +141,46 @@
 }
 
 .texto-graficos p {
-  margin-bottom: 0rem; /* Controlas el espacio entre párrafos */
+  margin-top: 0;
+  margin-bottom: 0; /* o incluso 0.5rem si quieres todo más apretado */
 }
 
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 70%; /* proporción vertical */
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+iframe {
+  margin: 0;
+  padding: 0;
+  display: block;
+  max-width: 100%;
+}
+
+
+/* LOGOS DECORATIVOS EN LA PANTALLA DE INICIO */
+.logos-wrapper {
+  display: flex;
+  align-items: center;  /* <-- esto alinea verticalmente */
+  justify-content: center;
+  gap: 30px;
+}
+
+
+.side-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 1;
+}
+.central-link p {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
 
