@@ -1,4 +1,4 @@
-/* SECCIÓN: ¿QUIÉN ESTÁ VIENDO? */
+/* ================== SECCIÓN: ¿QUIÉN ESTÁ VIENDO? ================== */
 .index-body {
   background-color: #141414;
   color: #fff;
@@ -9,6 +9,7 @@
   height: 100vh;
   text-align: center;
 }
+
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -19,6 +20,7 @@
     transform: scale(1);
   }
 }
+
 .container h1 {
   font-size: 2em;
   margin-bottom: 2rem;
@@ -27,25 +29,16 @@
 .profile a {
   text-decoration: none;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-
-.profile a p {
-  margin-top: 10px;
-  font-size: 1rem;
-}
-
 
 .profile-icon {
   width: 150px;
   height: 150px;
-  border-radius: 50%; /* Esto hace que sea completamente redondo */
+  border-radius: 50%; /* redondo */
   border: 3px solid transparent;
   transition: transform 0.3s ease, border 0.3s ease;
+  margin-top: 50px;
 }
-
 
 .profile-icon:hover {
   transform: scale(1.05);
@@ -57,18 +50,26 @@
   transform: translateY(0);
 }
 
-/* SECCIÓN: INTRODUCCIÓN EDITORIAL */
-.intro-body {
-  background-color: white;
-  color: #111;
+/* ================== GLOBAL ================== */
+body, html {
+  margin: 0;
+  padding: 0;
   font-family: 'Georgia', serif;
-  padding: 100px 5%;
+  color: #111;
+  background-color: white;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 1.15rem;
+}
+
+/* ================== SECCIÓN: INTRODUCCIÓN EDITORIAL ================== */
+.intro-body {
+  padding: 80px 5%;
 }
 
 .intro-container {
   max-width: 900px;
   margin: auto;
-  line-height: 1.8;
   font-size: 1.2rem;
   padding: 0 2rem;
 }
@@ -76,23 +77,23 @@
 .intro-container h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .intro-container h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #666;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .intro-container p {
   margin-bottom: 1.5rem;
 }
 
-/* ========== SCROLLYTELLING HITOS ========== */
-
+/* ================== SCROLLYTELLING HITOS ================== */
 .scroll-section {
-  padding: 80px 5%;
-  background-color: white;
+  padding: 60px 5%;
 }
 
 .scroll-container {
@@ -118,7 +119,7 @@
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease-out;
-  margin-bottom: 40vh; /* más espacio entre bloques */
+  margin-bottom: 30vh; /* menos espacio para no quedar tan separado */
 }
 
 .step.visible {
@@ -128,48 +129,45 @@
 
 .step p {
   font-size: 1.2rem;
-  line-height: 1.8;
 }
+
+/* Texto bajo gráficos */
 .texto-graficos {
-  background-color: white;
+  padding: 30px 5%;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
   color: #111;
-  font-family: 'Georgia', serif;
-  padding: 40px 5%;
-  margin-top: 0;
-  margin-bottom: 0.1rem;
-  font-size: 1.25rem; /* Texto grande */
 }
 
-.texto-graficos p {
-  margin-top: 0;
-  margin-bottom: 0; /* o incluso 0.5rem si quieres todo más apretado */
-}
-
-
+/* ================== IFRAME RESPONSIVE ================== */
 .iframe-container {
   position: relative;
   width: 100%;
-  padding-bottom: 70%; /* proporción vertical */
+  max-width: 1500px;
+  padding-bottom: 73.33%; /* 1100 / 1500 */
   height: 0;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto 15px;
 }
-iframe {
-  margin: 0;
-  padding: 0;
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
   display: block;
-  max-width: 100%;
+  margin: 0; padding: 0;
 }
 
-
-/* LOGOS DECORATIVOS EN LA PANTALLA DE INICIO */
+/* ================== LOGOS DECORATIVOS INICIO ================== */
 .logos-wrapper {
   display: flex;
-  align-items: center;  /* <-- esto alinea verticalmente */
+  align-items: center;
   justify-content: center;
   gap: 30px;
 }
-
 
 .side-logo {
   width: 150px;
@@ -178,9 +176,235 @@ iframe {
   object-fit: cover;
   opacity: 1;
 }
-.central-link p {
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
+
+/* ================== TEXTO INTRODUCTORIO SIN RECUADRO ================== */
+.intro-cine {
+  max-width: 800px;
+  margin: -10px auto 10px auto;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000;
+  text-align: left;
 }
 
+.intro-cine h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: 700;
+}
+
+/* ================== CARRUSEL GENERAL ================== */
+.carousel-container {
+  background-color: #c9c4c4;
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  margin: 10px auto 40px auto;
+  overflow: hidden;
+  font-family: 'Georgia', serif;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  min-width: 99%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+  padding: 40px 30px;
+  border-radius: 20px;
+  margin: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  line-height: 1.4;
+  text-align: left;
+  font-size: 1.25rem;
+  word-wrap: break-word;
+}
+
+.card h3 {
+  color: #222;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Botones carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0.8;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #555;
+}
+
+.carousel-btn.prev {
+  left: 6px;
+}
+
+.carousel-btn.next {
+  right: 6px;
+}
+
+/* ================== VIDEO SECTION ================== */
+.video-section {
+  max-width: 900px;
+  margin: 10px auto 40px auto;
+  padding: 0 20px;
+  font-size: 1.25rem;
+  color: #111;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
+/* ================== SECCIÓN DE DISTRIBUIDORAS ================== */
+.dist-prod-section .text-container {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #111;
+  text-align: left;
+}
+
+.dist-prod-section img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+
+.dist-prod-section h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111;
+  text-align: left;
+}
+
+/* ================== SECCIÓN OSCARES ================== */
+.oscar-info-section {
+  max-width: 900px;
+  margin: 40px auto 80px auto;
+  padding: 0 20px;
+  color: #111;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.oscar-info-section h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.oscar-info-section h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.oscar-info-section h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.oscar-info-section ul {
+  margin-left: 20px;
+  margin-bottom: 1rem;
+}
+
+.oscar-info-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ================== FINANCIAMIENTO DE CONTENIDOS ================== */
+.financiamiento-contenidos {
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  padding: 40px 20px;
+  color: #111;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.financiamiento-contenidos h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.financiamiento-contenidos h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.financiamiento-contenidos p {
+  margin-bottom: 1.25rem;
+}
+
+.financiamiento-contenidos ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: disc;
+  color: #222;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.financiamiento-contenidos ul li {
+  margin-bottom: 0.5rem;
+}
+.iframe-container {
+  margin-bottom: 5px; /* menos espacio */
+}
+
+.texto-graficos {
+  margin-top: 5px;  /* menos espacio */
+  margin-bottom: 0.25rem;
+}
