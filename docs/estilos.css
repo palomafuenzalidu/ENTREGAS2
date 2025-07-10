@@ -447,7 +447,7 @@ body, html {
 
 .video-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* Proporción 16:9 */
+  padding-bottom: 56.25%; 
   height: 0;
   overflow: hidden;
   margin-top: 20px;
@@ -464,3 +464,42 @@ body, html {
   border: none;
   border-radius: 15px;
 }
+
+.titulo-con-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 1rem;
+  padding: 0 20px;
+  width: 100%;             
+  box-sizing: border-box;  
+}
+
+
+.titulo-con-icono h1 {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #111;
+}
+
+.icono-lateral {
+  display: block;      
+  margin-left: auto;   
+  margin-right: auto;  
+  width: 120px;
+  height: auto;
+  border-radius: 6px;
+}
+.financiamiento-titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 0.5rem;
+}
+
+.financiamiento-titulo h2 {
+  align-self: flex-start; 
+  text-align: left;       
+  width: 100%;            
+}
+
