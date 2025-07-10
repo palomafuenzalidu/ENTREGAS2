@@ -1,8 +1,7 @@
 
-# README – Documentación del proceso
 
-## Titular del reportaje  
-**El streaming en los premios Oscar**
+## El streaming en los premios Oscar  
+
 
 ## Resumen del reportaje  
 
